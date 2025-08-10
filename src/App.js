@@ -6,15 +6,17 @@ import ChatList from "./components/ChatList";
 import ChatWindow from "./components/ChatWindow";
 import SendMessage from "./components/SendMessage";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const API_BASE =
   process.env.REACT_APP_API_URL ||
-  (process.env.NODE_ENV === "production"
+  (isProd
     ? "https://whatsapp-backend-9b43.onrender.com"
     : "http://localhost:5001");
 
 const SOCKET_URL =
   process.env.REACT_APP_SOCKET_URL ||
-  (process.env.NODE_ENV === "production"
+  (isProd
     ? "https://whatsapp-backend-9b43.onrender.com"
     : "http://localhost:5001");
 
