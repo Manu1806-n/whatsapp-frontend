@@ -56,7 +56,7 @@ whatsapp-frontend/
 ## 📦 Installation & Local Run
 ```bash
 # Clone repo
-git clone https://github.com/your-username/whatsapp-frontend.git
+git clone https://github.com/Manu1806-n/whatsapp-frontend.git
 cd whatsapp-frontend
 
 # Install dependencies
