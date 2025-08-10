@@ -1,70 +1,72 @@
-# Getting Started with Create React App
+# 💬 WhatsApp Web Clone – Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React.js frontend that mimics WhatsApp Web, connected to a real-time backend that processes WhatsApp-like webhook payloads and displays chats.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Live Demo
+- **Frontend:** [https://whatsapp-frontend-flax.vercel.app](https://whatsapp-frontend-flax.vercel.app)  
+- **Backend API:** [https://whatsapp-backend-9b43.onrender.com](https://whatsapp-backend-9b43.onrender.com)  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📌 Features
+- Real-time chat interface (WebSocket / Socket.IO)
+- Conversations grouped by user
+- Date separators & status indicators (✓ Sent, ✓✓ Delivered, ✓✓ Read)
+- Responsive UI (mobile & desktop friendly)
+- Send messages (saved to DB, no actual sending outside platform)
+- Displays sender name, number, and chat history
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🖥️ Backend Info
+This frontend works with a Node.js + MongoDB backend.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Backend GitHub Repo:** [whatsapp-backend](https://github.com/Manu1806-n/whatsapp-backend)
+- **Backend Stack:** Node.js, Express.js, MongoDB Atlas, Socket.IO
+- **Functions:**
+  - Process sample WhatsApp webhook payloads
+  - Store messages in MongoDB (`processed_messages` collection)
+  - Serve messages via REST API
+  - Push updates in real-time to connected clients
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Folder Structure
+```
+whatsapp-frontend/
+  ├── src/
+  │   ├── components/   # UI Components (ChatList, ChatWindow, etc.)
+  │   ├── styles/       # CSS / styling
+  │   └── App.js        # Main app entry
+  ├── public/           # Static files
+  └── package.json
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tech Stack
+- **Frontend:** React.js, Socket.IO Client, Axios
+- **Backend:** Node.js, Express.js, MongoDB Atlas, Socket.IO
+- **Hosting:** Vercel (Frontend), Render (Backend)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📦 Installation & Local Run
+```bash
+# Clone repo
+git clone https://github.com/your-username/whatsapp-frontend.git
+cd whatsapp-frontend
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Install dependencies
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Start development server
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📜 License
+This project is for educational/demonstration purposes only. No real WhatsApp messages are sent.
